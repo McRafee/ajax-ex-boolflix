@@ -116,3 +116,8 @@ header img {
 .movie span.year {
     color: grey;
 }
+
+#stars {
+    display: flex;
+    color: yellow;
+}
