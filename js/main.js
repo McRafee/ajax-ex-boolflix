@@ -10,6 +10,7 @@ $(document).ready(function() {
         var encodedInput = encodeURI(searchedInput)
         console.log(searchedInput);
         console.log(encodedInput);
+        $('.movies-container').html(""); //clear html
 
 
         var apiBaseUrl = 'https://api.themoviedb.org/3';
