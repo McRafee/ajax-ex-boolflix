@@ -5,31 +5,35 @@
     <meta charset="utf-8">
     <title>AJAX EX BOOLFLIX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" /> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" charset="utf-8"></script> <!-- Include Handlebars from a CDN -->
-    <!-- <link rel="icon" href="favicon.ico" />--><!-- Favicon -->
+    <!-- <link rel="icon" href="favicon.ico" />-->
+    <!-- Favicon -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> <!-- Font -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <img src="img/logo.png" alt="logo" />
-        </div>
-    </header>
-    <div class="container container-input">
+            <div class="header-left">
+                <h2>BoolFlix</h2><small>(English Version)</small>
+            </div>
+            <div class="container-input">
             <input id="search-input" type="text" name="" value="">
             <button id="search" type="button" name="button">Cerca</button>
+            </div>
+        </div>
 
-    </div>
+    </header>
+
     <div class="movies-container container">
 
     </div>
 
-    <script id="movie-template" type="text/x-handlebars-template">
+    <!-- <script id="movie-template" type="text/x-handlebars-template">
         <div class="movie">
             <h3>{{title}}</h3>
             <span class="original_title">{{original_title}}</span>
@@ -37,6 +41,39 @@
             <span class="vote_average">{{vote_average}}</span>
             <div id="stars">
                 {{{vote_stars}}}
+            </div>
+            <img src="https://image.tmdb.org/t/p/w185{{image}}" alt="{{original_title}}">
+        </div>
+    </script> -->
+    <script id="movie-template" type="text/x-handlebars-template">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://image.tmdb.org/t/p/w500{{image}}" alt="{{title}}">
+                </div>
+                <div class="flip-card-back">
+                    <h1>{{title}}</h1>
+                    <span class="original_title">{{original_title}}</span>
+                    <span class="original_language">{{original_language}}</span>
+                    <span class="vote_average">{{vote_average}}</span>
+                    <div id="stars">
+                        {{{vote_stars}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="person-template" type="text/x-handlebars-template">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://image.tmdb.org/t/p/w500{{image}}" alt="{{title}}">
+                </div>
+                <div class="flip-card-back">
+                    <h1>{{title}}</h1>
+                    <p>Architect & Engineer</p>
+                    <p>We love that guy</p>
+                </div>
             </div>
         </div>
     </script>
