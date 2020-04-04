@@ -6,16 +6,22 @@
 }
 
 body {
-    background: #1E2D3B;
+    background: rgb(27,61,116);
+    background: -webkit-linear-gradient(bottom, rgba(27,61,116,1) 0%, rgba(3,5,36,1) 70%);
+    background: -o-linear-gradient(bottom, rgba(27,61,116,1) 0%, rgba(3,5,36,1) 70%);
+    background: linear-gradient(to top, rgba(27,61,116,1) 0%, rgba(3,5,36,1) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b3d74",endColorstr="#030524",GradientType=1);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 1200px;
+    width: 1100px;
     height: 100%;
+
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -24,9 +30,10 @@ body {
     align-items: baseline;
 }
 header {
-    width: 100%;
+    /* width: 100%; */
     height: 70px;
-    background: rgb(46, 58, 70);
+    background-color: rgba(0, 0, 0, 0.70);
+    color: white;
 }
 header img {
     height: 50px;
@@ -37,51 +44,6 @@ header img {
     justify-content: flex-end;
 }
 
-/* .genre-selector {
-    display: block;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 700;
-    color: #444;
-    line-height: 1.3;
-    padding: 15px;
-    width: 250px;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-    border-radius: .5em;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-    background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
-    background-size: .65em auto, 100%;
-    margin: 20px;
-}
-
-.genre-selector::-ms-expand {
-    display: none;
-}
-
-.genre-selector:hover {
-    border-color: #888;
-}
-.genre-selector:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-    box-shadow: 0 0 0 3px -moz-mac-focusring;
-    color: #222;
-    outline: none;
-}
-.genre-selector option {
-    font-weight:normal;
-} */
-
 .movies-container {
     display: flex;
     justify-content: center;
@@ -90,42 +52,9 @@ header img {
     padding: 50px 0;
 }
 
-.movie {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    flex-basis: 200px;
-    padding: 20px;
-    margin: 10px 20px;
-    height: 360px;
-    background: rgb(46, 58, 70);
-    text-align: center;
-}
-
-.movie img {
-    max-width: 100%;
-}
-
-.movie h3 {
-    margin: 20px 0;
-    color: white;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.movie span.author {
-    color: grey;
-    font-size: 20px;
-}
-
-.movie span.year {
-    color: grey;
-}
-
 #stars {
     display: flex;
-    color: yellow;
+    color: gold;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -133,19 +62,13 @@ header img {
   background-color: transparent;
   width: 250px;
   height: 375px;
-  /* padding: 20px; */
   margin: 10px 10px;
-  /* border: 1px solid #f1f1f1; */
+  border: 2px solid white;
+  overflow: hidden;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* flex-direction: column; */
-  /* flex-basis: 200px; */
-  /* padding: 20px; */
-  /* margin: 10px 20px; */
-  /* height: 360px; */
-  /* background: rgb(46, 58, 70); */
   text-align: center;
 }
 
@@ -175,11 +98,12 @@ header img {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #ebebeb;
   color: black;
-  background-image: url(../img/film-poster-placeholder.png);
+  /* background-image: url(../img/film-poster-placeholder.png); */
   background-size: cover;
-  font-size: 18px;
+  font-size: 12px;
+  text-align: left;
 }
 
 .flip-card-front img {
@@ -187,9 +111,14 @@ header img {
     height: 375px;
 }
 
+#placeholder {
+}
+
 /* Style the back side */
 .flip-card-back {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.70);
   color: white;
   transform: rotateY(180deg);
 }
+
+/* https://www.mockplus.com/blog/post/search-bar-design */

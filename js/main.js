@@ -11,8 +11,8 @@ $(document).ready(function() {
     $("#search").click(function(event) {
         var searchedInput = $("#search-input").val().toLowerCase();
         var encodedInput = encodeURI(searchedInput);
-        console.log(searchedInput);
-        console.log(encodedInput);
+        // console.log(searchedInput);
+        // console.log(encodedInput);
         $('.movies-container').html(""); //clear html
 
 
@@ -26,11 +26,11 @@ $(document).ready(function() {
             },
             method: 'GET',
             success: function(data) {
-                console.log(data);
+                // console.log(data);
                 var movies = data.results;
                 for (var i = 0; i < movies.length; i++) {
                     var movie = movies[i];
-                    console.log(movie.title);
+                    // console.log(movie.title);
                     var movieInformation = {
                         title: movie.title || movie.name,
                         original_title: movie.original_title,
@@ -81,7 +81,7 @@ $(document).ready(function() {
             default:
                 star = "N/A";
         }
-        console.log(stars);
+        // console.log(stars);
         return star;
     }
 
