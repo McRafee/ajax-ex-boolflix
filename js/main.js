@@ -38,6 +38,7 @@ $(document).ready(function() {
                         vote_average: movie.vote_average,
                         vote_stars: stars(movie.vote_average),
                         image: movie.profile_path || movie.poster_path,
+                        overview: movie.overview || movie.known_for_department,
                         media_type: movie.media_type
                     }
                     if ((movieInformation.media_type == "movie") || (movieInformation.media_type == "tv" )) {

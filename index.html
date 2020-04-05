@@ -19,7 +19,8 @@
     <header>
         <div class="container">
             <div class="header-left">
-                <h2>BoolFlix</h2><small>(English Version)</small>
+                <h2>BoolFlix</h2>
+                <small>English Version</small>
             </div>
             <div class="container-input">
             <input id="search-input" type="text" name="" value="">
@@ -53,13 +54,14 @@
                     <img id="placeholder" src="img/film-poster-placeholder.png" alt="{{title}}">
                 </div>
                 <div class="flip-card-back">
-                    <h1>{{title}}</h1>
+                    <h4>{{title}}</h4>
                     <span class="original_title">{{original_title}}</span>
                     <span class="original_language">{{original_language}}</span>
                     <span class="vote_average">{{vote_average}}</span>
                     <div id="stars">
                         {{{vote_stars}}}
                     </div>
+                    <p>{{overview}}</p>
                 </div>
             </div>
         </div>
@@ -72,9 +74,8 @@
                     <img id="placeholder" src="img/film-poster-placeholder.png" alt="{{title}}">
                 </div>
                 <div class="flip-card-back">
-                    <h1>{{title}}</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
+                    <h4>{{title}}</h4>
+                    <p>{{overview}}</p>
                 </div>
             </div>
         </div>
